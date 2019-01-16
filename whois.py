@@ -15,8 +15,10 @@ def read_ipv4_addr_space_csv():
 
 dict = read_ipv4_addr_space_csv()
 
+
 def whoisurls(prefix):
     return dict[prefix.zfill(3) + '/8']
+
 
 def whois(ip):
     url = whoisurls(ip.split('.')[:1][0])
